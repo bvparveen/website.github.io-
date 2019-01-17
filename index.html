@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<h2>TVS APACHE BIKES</h2>
+<style>
+body {
+  font-family:Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+ 
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row {
+  display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(0, 100px);
+}
+
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center"><i>Bike Details</i></h2>
+
+<div class="container">
+  <style>
+ .row {
+  display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(0, 100px);
+}
+
+.mySlides {
+  display: none;
+  width:100%;
+ }
+ .all_images
+ {
+   
+   display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(0, 100px);
+
+  }
+  </style>
+  
+  
+  
+   
+  <div class="all_images">
+   <div class="mySlides">
+      <img src="bike1.jpg" >
+      <img src="Capture.jpg">
+      </div>
+	    <div class="container123">
+     <p class="skills html">Mileage 60</P>
+		<p class="skills css">Tubeless Tyre </p>
+		<p class="skills js">Dual Channel ABS</P>
+		<p class="skills php">5 Speed Gear Box</P>
+		 </div>
+		
+		<style>
+  
+  .container123 {
+
+  	display:column none;
+  width: 100%;
+  background-color: #ddd;
+}
+.skills {
+   text-align:left;  
+  padding: 10px;
+  color: white;
+   
+}
+
+.html {width: 90%; background-color: #4CAF50;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
+</style>
+  	   
+	  <div class="mySlides">
+      <img src="bike1.jpg" >
+      <img src="Capture.jpg" >
+     </div>
+    <div class="mySlides">
+     
+   <img src="bike2.jpg" >
+   <img src="Capture.jpg" >
+    
+  </div>
+
+  <div class="mySlides">
+     
+    <img src="bike3.jpg" >
+    <img src="Capture.jpg" >
+	   </div>
+    
+  <div class="mySlides">
+    
+    <img src="bike4.jpg" >
+    <img src="Capture.jpg" >
+	   </div>
+
+  <div class="mySlides">
+     
+    <img src="bike5.jpg" >
+    <img src="Capture.jpg" >
+	   </div>
+    
+  <div class="mySlides">
+     
+    <img src="bike6.jpg" >
+    <img src="Capture.jpg" >
+	  
+  </div>
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="bike1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Bike1 Feachers">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="bike2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Bike2 Feachers">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="bike3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Bike3 Feachers">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="bike4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Bike4 Feachers">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="bike5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Bike5 Feachers">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="bike6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Bike6 Feachers">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
